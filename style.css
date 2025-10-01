@@ -1,70 +1,176 @@
+/* Reset básico */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
 }
 
 body {
-  background-color: #fff;
+  font-family: 'Segoe UI', sans-serif;
   color: #333;
+  background-color: #fdfdfd;
+  line-height: 1.6;
 }
 
+/* Cabeçalho */
 header {
+  background-color: #0d0d0d;
+  color: #fff;
+  padding: 20px 40px;
   display: flex;
   justify-content: space-between;
-  padding: 20px 10%;
-  background-color: #f8f8f8;
   align-items: center;
 }
 
-.logo {
-  font-size: 1.5rem;
-  font-weight: bold;
+header h1 {
+  font-size: 1.8rem;
+  letter-spacing: 1px;
 }
 
 nav a {
-  margin-left: 20px;
-  text-decoration: none;
-  color: #333;
-}
-
-.hero {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 90vh;
-  background: url('https://source.unsplash.com/featured/?clothing') no-repeat center center/cover;
-  text-align: center;
-}
-
-.hero-content {
-  background-color: rgba(255,255,255,0.8);
-  padding: 40px;
-  border-radius: 8px;
-}
-
-.hero h1 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-}
-
-.btn {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 12px 25px;
-  background-color: #000;
   color: #fff;
   text-decoration: none;
-  border-radius: 4px;
+  margin-left: 30px;
+  font-weight: 500;
+  transition: color 0.3s ease;
 }
 
+nav a:hover {
+  color: #f39c12;
+}
+
+/* Hero Section */
+.hero {
+  background: url('https://source.unsplash.com/1600x600/?clothes,style') center/cover no-repeat;
+  color: #fff;
+  text-align: center;
+  padding: 120px 20px;
+}
+
+.hero h2 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 4px #000;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  text-shadow: 1px 1px 3px #000;
+}
+
+/* Seções */
+section {
+  padding: 60px 40px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  border-left: 6px solid #f39c12;
+  padding-left: 15px;
+}
+
+#sobre img {
+  width: 100%;
+  margin-top: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Produtos */
+.produtos-container {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.produto {
+  text-align: center;
+  width: 300px;
+}
+
+.produto img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.produto img:hover {
+  transform: scale(1.05);
+}
+
+.produto p {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* Formulário */
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  gap: 15px;
+}
+
+form label {
+  font-weight: 600;
+}
+
+form input {
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+form button {
+  padding: 12px;
+  background-color: #f39c12;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+form button:hover {
+  background-color: #d35400;
+}
+
+/* Rodapé */
+footer {
+  background-color: #222;
+  color: #fff;
+  text-align: center;
+  padding: 30px 20px;
+  margin-top: 60px;
+  font-size: 0.9rem;
+}
+
+/* Responsivo */
 @media (max-width: 768px) {
-  .hero h1 {
-    font-size: 1.8rem;
+  header {
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   nav {
-    display: none;
+    margin-top: 10px;
+  }
+
+  .produtos-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero h2 {
+    font-size: 2.2rem;
   }
 }
