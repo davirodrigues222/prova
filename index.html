@@ -3,25 +3,63 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Loja de Roupas - Moda Minimal</title>
+  <title>FitWear - Moda Fitness</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <div class="logo">ModaMinimal</div>
+    <h1>FitWear</h1>
     <nav>
-      <a href="#">Home</a>
-      <a href="#">Coleção</a>
-      <a href="#">Contato</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#produtos">Produtos</a>
+      <a href="#contato">Contato</a>
     </nav>
   </header>
 
   <section class="hero">
-    <div class="hero-content">
-      <h1>Nova Coleção Outono/Inverno</h1>
-      <p>Estilo e conforto em um só lugar.</p>
-      <a href="#" class="btn">Comprar Agora</a>
+    <h2>Estilo e Performance</h2>
+    <p>Roupas fitness para te acompanhar em qualquer treino.</p>
+  </section>
+
+  <section id="sobre">
+    <h2>Quem Somos</h2>
+    <p>A FitWear oferece peças fitness com qualidade, conforto e muito estilo. Para quem leva o esporte a sério — e o visual também.</p>
+    <img src="https://images.pexels.com/photos/4662433/pexels-photo-4662433.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Roupas fitness">
+  </section>
+
+  <section id="produtos">
+    <h2>Destaques da Loja</h2>
+    <div class="produtos">
+      <div>
+        <img src="https://images.pexels.com/photos/1552242/pexels-photo-1552242.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Legging fitness">
+        <p>Leggings</p>
+      </div>
+      <div>
+        <img src="https://images.pexels.com/photos/3768913/pexels-photo-3768913.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Top esportivo">
+        <p>Tops Esportivos</p>
+      </div>
+      <div>
+        <img src="https://images.pexels.com/photos/414029/pexels-photo-414029.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Tênis de corrida">
+        <p>Tênis de Corrida</p>
+      </div>
     </div>
   </section>
+
+  <section id="contato">
+    <h2>Entre em Contato</h2>
+    <form>
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" required />
+
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" required />
+
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 FitWear. Todos os direitos reservados.</p>
+  </footer>
 </body>
 </html>
